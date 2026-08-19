@@ -1,0 +1,1531 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 0px;
+        }
+
+
+
+        /* Hidden State */
+
+.fade-in{
+    opacity:0;
+    transform:translateY(60px);
+    transition:all .8s ease;
+}
+
+/* Visible State */
+
+.fade-in.show{
+    opacity:1;
+    transform:translateY(0);
+}
+
+.fade-left{
+    opacity:0;
+    transform:translateX(-80px);
+    transition:.8s ease;
+}
+
+.fade-left.show{
+    opacity:1;
+    transform:translateX(0);
+}
+
+.fade-right{
+    opacity:0;
+    transform:translateX(80px);
+    transition:.8s ease;
+}
+
+.fade-right.show{
+    opacity:1;
+    transform:translateX(0);
+}
+
+.logo{
+    animation:float 3s ease-in-out infinite;
+}
+
+@keyframes float{
+
+    0%{
+        transform:translateY(0);
+    }
+
+    50%{
+        transform:translateY(-8px);
+    }
+
+    100%{
+        transform:translateY(0);
+    }
+
+}
+
+
+
+
+
+
+.whatsapp{
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+
+    width: 60px;
+    height: 60px;
+
+    background: #c4f2d5;
+    color: #fff;
+
+    border-radius: 50%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 38px;
+    text-decoration: none;
+
+    z-index: 9999;
+
+    box-shadow: 0 0 15px #3ad674;
+
+    animation: glow 1.8s infinite;
+    animation: float 0.8s infinite;
+}
+
+.whatsapp:hover{
+    transform: scale(1.1);
+    transition: 0.3s ease;
+}
+
+@keyframes glow{
+
+    0%{
+        box-shadow: 0 0 5px #25D366;
+    }
+
+    50%{
+        box-shadow:
+            0 0 20px #25D366,
+            0 0 40px #25D366,
+            0 0 60px #25D366;
+    }
+
+    100%{
+        box-shadow: 0 0 5px #25D366;
+    }
+}
+
+
+
+
+
+
+
+
+        @media (max-width: 768px) {
+            .mainbox1{
+                height: 1010px !important;
+            }
+            
+            .headshotbox{
+                width: 100% !important;
+            }
+            .mainbox2{
+                width: 91.7% !important;
+                height: 1000px !important;
+                padding: 20px !important;
+                
+            }
+            .insideinbox3{
+                width: 79% !important;
+            }
+            .inbox4{
+                margin-top: 263px !important;
+            }
+            .insideinbox4{
+                width: 79% !important;
+            }
+            .inbox1{
+                width: 90% !important;
+                margin-left: 14px !important;
+            }
+            .readytobuildyournextweb{
+                width: 55% !important;
+            }
+            .insideinbox1{
+                margin-top: 50px !important;
+            }
+            .insideinbox1 h3{
+                font-size: 17px !important;
+            }
+            .insideinbox1 h1{
+                line-height: 46px !important;
+            }
+            .okeke{
+                font-size: 75px !important;
+            }
+            .chigoziecolor{
+                font-size: 75px !important;
+            }
+            .buttonboxininbox1{
+                margin-top: 20px;
+            }
+            .buttonboxininbox1 button{
+                width: 29%;
+            }
+            .inbox2{
+                width: 93% !important;  
+            }
+            .inbox2 hr{
+                display: none;
+            }
+            
+            .mainbox3{
+                height: 1300px !important;
+                display: flex !important;
+                justify-content: flex-start!important;
+            }
+            .fourinone-1{
+                width: 78% !important;
+                
+            }
+            .fourinone-1 h2{
+                font-size: 18px !important;
+            }
+            .fourinonecolor{
+                font-size: 15px !important;
+            }
+            .email{
+                width: 88% !important;
+                gap: 280px !important;
+            }
+            .insidesocialmedia{
+                width: 85% !important;
+            }
+            .socialmedia1{
+                column-gap: 0px;
+                height: 390px !important;
+            }
+            .socialmedia2{
+                margin-top: 0px;
+                height: 390px !important;
+            }
+            .myprojectbox{
+                height: 1900px !important;
+            }
+            .picinmyprojectbox-1{
+                background-position-y: top !important;
+            }
+            .inmyprojectbox{
+                width: 92% !important;
+            }
+            .myprojectbox-2{
+                height: 1900px !important;
+            }
+            .inmyprojectbox-2{
+                width: 92% !important;
+            }
+            .textinmyprojectbox{
+                width: 93% !important;
+            }
+            .myworkbox{
+                height: 1300px !important;
+            }
+            .inmyworkbox{
+                width: 92% !important;
+            }      
+        }
+
+
+
+
+
+        
+        button{
+            background: gray;
+            color: black;
+            border: none;
+            cursor: pointer;
+            border-radius: 30px;
+            height: 45px;
+            width: 23%;
+            font-size: 16px;
+        }
+        .mainbox1{
+            width: 100%;
+            height: 530px;
+            background:  rgb(4, 4, 26);
+            display: flex;
+            padding-top: 100px;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+        .inbox1{
+            width: 53%;
+            height: 530px;
+            background-color: transparent;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            margin-left: 30px;
+        }
+        .headshotbox{
+            width: 40%;
+            height: 480px;
+            background-color: transparent;
+            background-image: url(images/headshot6.png);
+            background-size: cover;
+            background-position: center;
+            object-fit: cover;
+            image-rendering: auto;
+            filter: contrast(1.05) saturate(1.05);
+        }
+        .readytobuildyournextweb{
+            width: 37%;
+            height: 32px;
+            background-color: transparent;
+            font-size: 15px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: gray;
+            border-radius: 30px;
+            border: 1px solid blueviolet;
+        }
+        .insideinbox1{
+            width: 100%;
+            height: 270px;
+            background-color: transparent;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .insideinbox1 h1, h2, h3, h4, h5, h6, p{
+            margin: 0px;
+            padding: 0px;
+        }
+        .chigoziecolor{
+            background: linear-gradient(135deg, #38BDF8, #3B82F6, #8B5CF6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-size: 95px;
+            letter-spacing: -6px;
+            
+        }
+        .okeke{
+            font-weight: 900;
+            color: transparent;
+            -webkit-text-stroke: 2px #585f6e;
+            text-transform: uppercase;
+            letter-spacing: -5px;
+            transform: scaleY(2);
+            transform-origin: bottom;
+            
+        }
+        .buttonboxininbox1{
+            width: 100%;
+            height: 80px;
+            background-color: transparent;
+            display: flex;
+            gap: 10px;
+            align-items: center;
+        }
+        .insideinbox1 h1{
+            transform: scaleY(1.5);
+        }
+        .mainbox2{
+            width: 92.1%;
+            height: 400px;
+            background:  rgb(4, 4, 26);
+            padding: 50px;
+
+        }
+        .mainbox2 hr, h1{
+            margin: 0px;
+            padding: 0px;
+        }
+        .mainbox3{
+            width: 100%;
+            height: 780px;
+            background: rgb(4, 4, 26);;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .inbox2{
+            width: 96%;
+            height: 60px;
+            background-color: transparent;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .inbox3{
+            width: 100%;
+            height: 250px;
+            background-color: transparent;
+            margin-top: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
+        }
+        .insideinbox3{
+            width: 43%;
+            height: 180px;
+            background-color: black;
+            padding: 30px;
+            border-radius: 30px;
+            border: 1px solid gray;
+            display: flex;
+            flex-direction: column; 
+        }
+        .insideinbox3:hover{
+            border: 1px solid blue;
+        }
+        .inbox4{
+            width: 100%;
+            height: 250px;
+            background-color: transparent;
+            margin-top: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
+        }
+        .insideinbox4{
+            width: 43%;
+            height: 180px;
+            background-color: black;
+            padding: 30px;
+            border-radius: 30px;
+            border: 1px solid gray;
+            display: flex;
+            flex-direction: column; 
+        }
+        .insideinbox4:hover{
+            border: 1px solid blue;
+        }
+        .processtextbox{
+            width: 97.75%;
+            height: 110px !important;
+            background-color: rgb(4, 4, 26);
+            color: white;
+            display: flex;
+            align-items: flex-end;
+            font-size: 25px;
+            padding-left: 28px;
+        }
+        .mainbox4{
+            width: 100%;
+            height: 660px;
+            background-color: rgb(4, 4, 26);;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 30px;
+        }
+        .fourinone-1{
+            width: 91%;
+            height: 110px;
+            background-color: rgb(26, 23, 49);
+            border-radius: 20px;
+            border: 1px solid rgb(30, 30, 30);
+            display: flex;
+            padding-left: 50px;
+            align-items: center;
+            gap: 40px;
+            color: white;
+        }
+        .fourinonecolor{
+            color: gray;
+            font-size: 19px;
+            font-family: 'Times New Roman', Times, serif;
+            letter-spacing: 1px;
+        }
+        u{
+            text-decoration-thickness: 6px;
+            text-underline-offset: 14px;
+            text-decoration-color: blueviolet;
+        }
+
+        .footer{
+            width: 100%;
+            height: 380px;
+            background-color: rgb(4, 4, 26);;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 50px;
+        }
+        .startaproject{
+            width: 93%;
+            height: 220px;
+            background-color: transparent;
+            display: flex;
+            align-items: flex-end;
+        }
+        .email{
+            width: 91%;
+            height: 80px;
+            background-color: white;
+            border-radius: 30px;
+            text-decoration: none !important;
+            display: flex;
+            align-items: center;
+            padding-left: 20px;
+            gap: 1000px;
+            
+        }
+        a{
+        
+            text-decoration: none !important;
+            color: inherit;
+        }
+        .emailcircle{
+            width: 50px;
+            height: 50px;
+            background-color: black;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .projectcolor{
+            color: blue;
+        }
+        .socialmedia1{
+            width: 100%;
+            height: 200px;
+            background-color: rgb(4, 4, 26);;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            gap: 18px;
+        }
+        .insidesocialmedia{
+            width: 43.5%;
+            height: 150px;
+            background-color: rgb(1, 1, 23);
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding-left: 25px;
+            border-radius: 20px;
+            border: 1px solid blueviolet;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+        .insidesocialmedia h1{
+            font-size: 25px;
+        }
+        .insidesocialmedia img{
+            width: 45px;
+            height: 45px;
+            object-fit: contain;
+            font-size: inherit;
+        }
+        .textinsocialmedia img{
+            width: 45px;
+            height: 45px;
+            object-fit: contain;
+            font-size: inherit;
+        }
+
+        .socialmedia2{
+            width: 100%;
+            height: 200px;
+            background-color: rgb(4, 4, 26);;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            gap: 18px;
+        }
+        .textinsocialmedia{
+            width: 80%;
+            height: 50px;
+            background-color: transparent;
+            display: flex;
+            align-items: center;
+        }
+
+
+
+        .myprojectbox{
+            width: 100%;
+            height: 680px;
+            background-color: rgb(4, 4, 26); 
+            flex-wrap: wrap;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            padding-top: 30px;
+        }
+        .inmyprojectbox{
+            width: 30.7%;
+            height: 550px;
+            background-color: transparent;
+            border-radius: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            border: 1px solid blueviolet;
+        }
+
+
+        .myprojectbox-2{
+            width: 100%;
+            height: 650px;
+            background-color: rgb(4, 4, 26); 
+            flex-wrap: wrap;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            gap: 20px;
+        }
+        .inmyprojectbox-2{
+            width: 30.7%;
+            height: 550px;
+            background-color: transparent;
+            border-radius: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            border: 1px solid blueviolet;
+        }
+
+
+
+        .picinmyprojectbox-1{
+            width: 100%;
+            height: 220px;
+            background-color: brown;
+            border-top-left-radius: 20px;
+            border-top-right-radius: 20px;
+            background-image: url(images/healthcareproject.png);
+            background-size: cover;
+            background-position: center;
+        }
+        .picinmyprojectbox-2{
+            width: 100%;
+            height: 220px;
+            background-color: brown;
+            border-top-left-radius: 20px;
+            border-top-right-radius: 20px;
+            background-image: url(images/ecommerceproject.png);
+            background-size: cover;
+            background-position: center;
+        }
+        .picinmyprojectbox-3{
+            width: 100%;
+            height: 220px;
+            background-color: brown;
+            border-top-left-radius: 20px;
+            border-top-right-radius: 20px;
+            background-image: url(images/constructionproject.png);
+            background-size: cover;
+            background-position: center;
+        }
+        .picinmyprojectbox-4{
+            width: 100%;
+            height: 220px;
+            background-color: brown;
+            border-top-left-radius: 20px;
+            border-top-right-radius: 20px;
+            background-image: url(images/beddingproject.png);
+            background-size: cover;
+            background-position: center;
+        }
+        .picinmyprojectbox-5{
+            width: 100%;
+            height: 220px;
+            background-color: brown;
+            border-top-left-radius: 20px;
+            border-top-right-radius: 20px;
+            background-image: url(images/eventproject.png);
+            background-size: cover;
+            background-position: center;
+        }
+        .picinmyprojectbox-6{
+            width: 100%;
+            height: 220px;
+            background-color: brown;
+            border-top-left-radius: 20px;
+            border-top-right-radius: 20px;
+            background-image: url(images/printingproject.png);
+            background-size: cover;
+            background-position: center;
+        }
+        .textinmyprojectbox{
+            width: 91%;
+            height: 300px;
+            background-color: transparent;
+            padding: 20px;
+            color: white;
+            border-radius: 20px;
+        }
+        .textinmyprojectbox h2{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .textinmyprojectbox p{
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            color: gray;
+            font-size: 15px;
+            line-height: 23px;
+        }
+        .textinmyprojectbox button{
+            background-color: skyblue;
+        }
+
+        .myworkbox{
+            width: 100%;
+            height: 680px;
+            background-color: rgb(4, 4, 26); 
+            flex-wrap: wrap;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 30px;
+            padding-top: 30px;
+        }
+        .inmyworkbox{
+            width: 39%;
+            height: 550px;
+            background-color: transparent;
+            border-radius: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            border: 1px solid blueviolet;
+        }
+        .picinmyworkbox-1{
+            width: 100%;
+            height: 230px;
+            background-color: brown;
+            border-top-left-radius: 20px;
+            border-top-right-radius: 20px;
+            background-image: url(images/kemokwork.png);
+            background-size: cover;
+            background-position: center;
+        }
+        .picinmyworkbox-2{
+            width: 100%;
+            height: 230px;
+            background-color: brown;
+            border-top-left-radius: 20px;
+            border-top-right-radius: 20px;
+            background-image: url(images/massageenvywork.png);
+            background-size: cover;
+            background-position: center;
+        }
+        .textinmyworkbox{
+            width: 94%;
+            height: 300px;
+            background-color: transparent;
+            color: white;
+            border-bottom-left-radius: 20px;
+            border-bottom-right-radius: 20px;
+            padding: 15px;
+        }
+        .textinmyworkbox h2{
+            font-family: Arial, Helvetica, sans-serif;
+            line-height: 17px;
+        }
+        .textinmyworkbox p{
+            font-family: sans-serif;
+            font-size: 15px;
+            color: gray;
+            line-height: 19px;
+            letter-spacing: 1px;
+        }
+        .buttonboxinmywork-1{
+            width: 100%;
+            height: 40px;
+            background-color: transparent;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        .buttonboxinmywork-1 button{
+            border-radius: 13px;
+            height: 30px;
+            width: auto;
+            background-color: transparent;
+            border: 1px solid lightskyblue;
+            color: white;
+            cursor: default;
+        }
+        .buttonboxinmywork-2{
+            width: 100%;
+            height: 50px;
+            background-color: transparent;
+            display: flex;
+            align-items: center;
+            gap: 7px;
+        }
+        .buttonboxinmywork-2 button{
+            width: auto;
+            height: 37px;
+            border-radius: 11px;
+            background-color: skyblue;
+        }
+        .kemokwork{
+            color: white;
+            font-size: 40px;
+        }
+        .landingwork{
+            color: burlywood;
+            font-size: 19px;
+        }
+
+
+
+
+
+
+
+
+
+        /* ==========================
+   CORPORATE FOOTER
+========================== */
+
+.corporate-footer{
+    width: 100%;
+    background: rgb(4, 4, 26);
+    padding: 55px 6% 25px;
+    box-sizing: border-box;
+    color: white;
+}
+
+.footer-top{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+}
+
+.footer-logo{
+    color: white;
+    text-decoration: none;
+    font-size: 27px;
+    font-weight: 700;
+    letter-spacing: -1px;
+}
+
+.footer-logo span{
+    color: #6BB8FF;
+}
+
+
+/* NAVIGATION */
+
+.footer-links{
+    display: flex;
+    gap: 30px;
+}
+
+.footer-links a,
+.footer-socials a{
+    color: #858597;
+    text-decoration: none;
+    font-size: 14px;
+    transition: .3s ease;
+}
+
+.footer-links a:hover,
+.footer-socials a:hover{
+    color: #6BB8FF;
+}
+
+
+/* SOCIALS */
+
+.footer-socials{
+    display: flex;
+    gap: 20px;
+}
+
+
+/* DIVIDER */
+
+.footer-line{
+    width: 100%;
+    height: 1px;
+    background: rgba(255,255,255,.1);
+    margin: 40px 0 22px;
+}
+
+
+/* BOTTOM */
+
+.footer-bottom{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-bottom p{
+    margin: 0;
+    color: #686879;
+    font-size: 13px;
+}
+
+.footer-bottom span{
+    color: #8B5CF6;
+}
+
+
+/* ==========================
+   MOBILE
+========================== */
+
+@media(max-width:768px){
+
+    .corporate-footer{
+        padding: 45px 7% 20px;
+    }
+
+    .footer-top{
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 25px;
+    }
+
+    .footer-links{
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 18px 25px;
+    }
+
+    .footer-socials{
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .footer-bottom{
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+}
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        /*==========================
+        NAVBAR
+==========================*/
+
+.navbar{
+    position:fixed;
+    top:0;
+    left:0;
+    width:91.3%;
+    height:80px;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:0 8%;
+
+    background:rgba(67, 68, 73, 0.65);
+    backdrop-filter:blur(14px);
+    -webkit-backdrop-filter:blur(14px);
+
+    border-bottom:1px solid rgba(255,255,255,.08);
+
+    z-index:9999;
+
+    transition:.4s;
+}
+
+.logo{
+    color:white;
+    font-size:30px;
+    font-weight:bold;
+    text-decoration:none;
+    letter-spacing:1px;
+}
+
+.nav-links{
+    display:flex;
+    align-items:center;
+    gap:35px;
+
+    list-style:none;
+}
+
+.nav-links a{
+    color:white;
+    text-decoration:none;
+    font-size:17px;
+    transition:.3s;
+}
+
+.nav-links a:hover{
+    color:#6BB8FF;
+}
+
+
+.project-btn{
+
+    background:#4F9CF9;
+
+    padding:12px 25px;
+
+    border-radius:50px;
+
+    color:white !important;
+
+    transition:.4s;
+    text-decoration: none;
+    font-size: 16px !important;
+}
+
+
+
+
+.project-btn:hover{
+
+    background:#6BB8FF;
+
+    transform:translateY(-2px);
+
+}
+
+.menu-toggle{
+
+    display:none;
+
+    color:white;
+
+    font-size:32px;
+
+    cursor:pointer;
+
+}
+
+/*==========================
+     NAVBAR ON SCROLL
+==========================*/
+
+.navbar.scrolled{
+
+    background:rgba(10,17,40,.45);
+
+    backdrop-filter:blur(18px);
+
+    box-shadow:0 10px 25px rgba(0,0,0,.25);
+
+}
+.nav-right{
+    display:flex;
+    align-items:center;
+    gap:20px;
+}
+
+/*==========================
+       MOBILE
+==========================*/
+
+
+@media(max-width:768px){
+
+    .navbar{
+        padding:0 20px;
+    }
+
+    .nav-right{
+        gap:15px;
+    }
+
+    .menu-toggle{
+        display:block;
+    }
+
+    .nav-links{
+        position:absolute;
+        top:80px;
+        left:0;
+        width:100%;
+
+        display:flex;
+        flex-direction:column;
+
+        background:rgba(10,17,40,.95);
+        backdrop-filter:blur(18px);
+
+        max-height:0;
+        overflow:hidden;
+
+        transition:max-height .4s ease;
+    }
+
+    .nav-links.active{
+        max-height:300px;
+        padding:25px 0;
+    }
+
+    .project-btn{
+        padding:10px 18px;
+        font-size:14px;
+    }
+
+}
+
+@media(max-width:480px){
+
+    .project-btn{
+        font-size:13px;
+        padding:9px 14px;
+    }
+
+}
+
+
+
+    </style>
+</head>
+<body>
+
+
+<nav class="navbar">
+
+    <a href="#" class="logo">Tim's Dev</a>
+
+    <ul class="nav-links" id="navLinks">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+
+    <div class="nav-right">
+
+        <a href="#contact" class="project-btn">
+            Hire Me
+        </a>
+
+        <div class="menu-toggle" id="menuToggle">
+            ☰
+        </div>
+
+    </div>
+
+</nav>
+
+
+
+
+
+
+
+    <a href="https://wa.me/2348141891555" class="whatsapp" target="_blank">
+    <img src="images/whatsapp7.png" alt="WhatsApp" width="70%">
+    </a>
+
+
+
+    <div class="mainbox1" id="home">
+        <div class="inbox1">
+            <div class="readytobuildyournextweb">
+                <p>🔸Ready to Build Your Next Website</p>
+            </div>
+            <div class="insideinbox1">
+                <h3 style="color: blue; ">Frontend Engineering Specialist</h3><br><br>
+                <h1 style="font-size: 95px; line-height: 61px; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;"><b><span class="okeke">OKEKE</span>  <span class="chigoziecolor">CHIGOZIE</span></b></h1>
+                <br><br><br><br>
+                <p style="font-size: 18px; color: gray; font-family: Arial, Helvetica, sans-serif;">Building the next generation of high-fidelity <br>digital experiences.</p>
+            </div>
+            <div class="buttonboxininbox1">
+                <button style="background-color: #8B5CF6;"><b>View Projects</b></button>
+                <button><b>Let's talk?</b></button>
+            </div>
+        </div>
+        <div class="headshotbox"></div>
+    </div>
+    <div class="mainbox2" id="about">
+        <h1 style="font-size: 45px; font-family: Arial, Helvetica, sans-serif; color: white;"><u>About Me</u></h1><br>
+        <br>
+        <p style="font-size: 14px; line-height: 25px; color: gray; font-family: Verdana, Geneva, Tahoma, sans-serif;" >Hello! I'm Chigozie Okeke, a passionate Front-End Web Developer based in Nigeria with nearly two years of experience creating modern, responsive, and user-friendly websites. My journey into web development started with curiosity and has grown into a passion for building digital experiences that help businesses establish a strong online presence. I build websites for businesses of all sizes and industries, focusing on designs that are visually appealing, easy to navigate, fast, and optimized for all devices. I believe every business deserves a website that not only looks great but also creates value and leaves a lasting impression on its audience. Throughout my journey, I have remained committed to learning and improving my skills. Technology evolves every day, and I enjoy embracing new challenges that help me grow as a developer. Every project I complete is an opportunity to sharpen my craft and deliver even better solutions for my clients. One of the values I take pride in is trust. My clients rely on me to bring their ideas to life, and I strive to exceed their expectations through clear communication, attention to detail, and quality work. Building lasting relationships is just as important to me as building exceptional websites. Although I am based in Nigeria, I am passionate about collaborating with businesses and individuals from around the world. I believe great ideas have no borders, and I enjoy working with people from different industries and cultures to turn their visions into reality. For me, coding is more than writing HTML, CSS, and JavaScript—it's about solving problems, creating meaningful experiences, and helping businesses grow. As I continue to find my place in the tech industry, I remain driven by curiosity, creativity, and the desire to keep learning. This is only the beginning of my journey, and I look forward to building impactful digital experiences for clients across the globe.</p>
+    </div>
+    <div class="mainbox3" id="services">
+        <div class="processtextbox fade-in">
+            <h1><u>My Services</u></h1>
+        </div>
+        <div class="inbox3">
+            <div class="insideinbox3 fade-in">
+                <h1 style="color: blue;"><b>01</b></h1><br>
+                <h3 style="color: white; letter-spacing: -1px; word-spacing: 2px;"><b>FRONTEND DEVELOPMENT</b></h3><br>
+                <p style="color: gray; font-size: 14px; font-family: Verdana, Geneva, Tahoma, sans-serif;">Building responsive, performant web applications with React, Next.js, and TypeScript. Clean code, component architecture, and scalable state management.</p>
+            </div>
+            <div class="insideinbox3 fade-in">
+                <h1 style="color: blue;"><b>02</b></h1><br>
+                <h3 style="color: white; letter-spacing: -1px; word-spacing: 2px;"><b>UI IMPLEMENTATION</b></h3><br>
+                <p style="color: gray; font-size: 14px; font-family: Verdana, Geneva, Tahoma, sans-serif;">Translating Figma and design systems into pixel-perfect interfaces. Attention to spacing, typography, micro-interactions, and responsive behavior.</p>
+            </div>
+        </div>
+        <div class="inbox4">
+            <div class="insideinbox4 fade-in">
+                <h1 style="color: blue;"><b>03</b></h1><br>
+                <h3 style="color: white; letter-spacing: -1px; word-spacing: 2px;"><b>PERFOMANCE OPTIMIZATION</b></h3><br>
+                <p style="color: gray; font-size: 14px; font-family: Verdana, Geneva, Tahoma, sans-serif;">Improving load times, Core Web Vitals, and runtime performance. Lazy loading, code splitting, and accessibility best practices.</p>
+            </div>
+            <div class="insideinbox4 fade-in">
+                <h1 style="color: blue;"><b>04</b></h1><br>
+                <h3 style="color: white; letter-spacing: -1px; word-spacing: 2px;"><b>LANDING PAGES</b></h3><br>
+                <p style="color: gray; font-size: 14px; font-family: Verdana, Geneva, Tahoma, sans-serif;">High-converting marketing pages with SEO fundamentals, fast loading, and conversion-focused design that drives results.</p>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="processtextbox">
+        <h1><u>WHAT I BUILD</u></h1>
+    </div>
+    <div class="myprojectbox">
+        <div class="inmyprojectbox fade-in">
+            <div class="picinmyprojectbox-1"></div>
+            <div class="textinmyprojectbox">
+                <h2><b>HealthCare Websites</b></h2><br>
+                <p>A responsive healthcare website created to deliver a seamless digital experience for patients. The platform includes intuitive navigation, appointment booking, medical service information, doctor profiles, and a modern interface designed to build trust and improve accessibility across all devices.</p>
+                <br><br><br>
+                <button style="height: 37px; width: 29%;"><b>Get Yours</b></button>
+            </div>
+        </div>
+        <div class="inmyprojectbox fade-in">
+            <div class="picinmyprojectbox-2"></div>
+            <div class="textinmyprojectbox">
+                <h2><b>E-commerce Websites</b></h2><br>
+                <p>A responsive online shopping platform designed with a clean, user-friendly interface. Features include product listings, category navigation, search functionality, shopping cart, and a seamless shopping experience across all devices.</p>
+                <br><br><br><br>
+                <button style="height: 37px; width: 29%;"><b>Get Yours</b></button>
+            </div>
+        </div>
+        <div class="inmyprojectbox fade-in">
+            <div class="picinmyprojectbox-3"></div>
+            <div class="textinmyprojectbox">
+                <h2><b>Construction Websites</b></h2><br>
+                <p>Designed and developed a modern, responsive website for a construction company, showcasing services, completed projects, and company expertise. The layout emphasizes trust, professionalism, and easy client engagement.</p>
+                <br><br><br><br>
+                <button style="height: 37px; width: 29%;"><b>Get Yours</b></button>
+            </div>
+        </div>
+    </div>
+
+    <div class="myprojectbox-2">
+        <div class="inmyprojectbox-2 fade-in">
+            <div class="picinmyprojectbox-4"></div>
+            <div class="textinmyprojectbox">
+                <h2>Luxury Textile Websites</h2><br>
+                <p>Created a clean and visually appealing website for a bedding business, allowing customers to explore premium bedding collections with ease. The design focuses on comfort, elegance, and a seamless user experience across all devices.</p>
+                <br><br><br><br>
+                <button style="height: 37px; width: 29%;"><b>Get Yours</b></button>
+            </div>
+        </div>
+        <div class="inmyprojectbox-2 fade-in">
+            <div class="picinmyprojectbox-5"></div>
+            <div class="textinmyprojectbox">
+                <h2><b>Events Planning Websites</b></h2><br>
+                <p>Built a fully responsive event planning website using HTML, CSS, and JavaScript. The project includes a captivating homepage, service showcases, event gallery, booking section, and contact page, all designed to deliver a smooth user experience.</p>
+                <br><br><br><br>
+                <button style="height: 37px; width: 29%;"><b>Get Yours</b></button>
+            </div>
+        </div>
+        <div class="inmyprojectbox-2 fade-in">
+            <div class="picinmyprojectbox-6"></div>
+            <div class="textinmyprojectbox">
+                <h2><b>Printing Websites</b></h2><br>
+                <p>Designed and developed a printing website that combines modern aesthetics with user-focused functionality. It consist of a compelling hero section, product showcase, service highlights, and a fully responsive design, helping businesses present their brand and attract new customers online.</p>
+                <br><br><br>
+                <button style="height: 37px; width: 29%;"><b>Get Yours</b></button>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="processtextbox">
+        <h1><u>PROJECT</u></h1>
+    </div>
+    <div class="myworkbox" id="projects">
+        <div class="inmyworkbox">
+            <div class="picinmyworkbox-1"></div>
+            <div class="textinmyworkbox">
+                <br>
+                <h2><b><span class="kemokwork">KemokVentures</span><br><span class="landingwork"> - Landing Page</span></b></h2><br>
+                <p>A modern and elegant website designed for a bedding and home essentials brand. The site combines a clean layout with a warm, luxurious feel to showcase products and create a comfortable shopping experience.</p>
+                <br>
+                <br>
+                <div class="buttonboxinmywork-1">
+                    <button><b>HTML</b></button>
+                    <button><b>CSS</b></button>
+                    <button><b>JavaScript</b></button>
+                </div>
+                <div class="buttonboxinmywork-2">
+                    <button><b>View Work ↗</b></button>
+                    <button><b>GitHub</b></button>
+                </div>
+            </div>
+        </div>
+        <div class="inmyworkbox">
+            <div class="picinmyworkbox-2"></div>
+            <div class="textinmyworkbox">
+                <br>
+                <h2><b><span class="kemokwork">MassageEnvy</span><br><span class="landingwork"> - Service Page</span></b></h2><br>
+                <p>A clean and professional website designed for a beauty and wellness business. It showcases massage, body care, facials, and skincare services through an organized layout, making it easy for visitors to explore offerings.</p>
+                <br>
+                <br>
+                <div class="buttonboxinmywork-1">
+                    <button><b>HTML</b></button>
+                    <button><b>CSS</b></button>
+                    <button><b>JavaScript</b></button>
+                </div>
+                <div class="buttonboxinmywork-2">
+                    <button><b>View Work ↗</b></button>
+                    <button><b>GitHub</b></button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="processtextbox">
+        <h1><u>PROCESS</u></h1>
+    </div>
+    <div class="mainbox4">
+        <div class="fourinone-1 fade-left">
+            <h1 style="color: blueviolet">01</h1>
+            <h2 style="letter-spacing: -1px; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif">DISCOVERY<br><span class="fourinonecolor">Understanding your goals, audience, and technical requirements before writing any code.</span></h2>
+        </div>
+        <div class="fourinone-1 fade-right">
+            <h1 style="color: blueviolet">02</h1>
+            <h2 style=" letter-spacing: -1px; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif">DESIGN HANDOFF<br><span class="fourinonecolor">Reviewing wireframes, prototypes, and design systems to plan a flawless implementation.</span></h2>
+            
+        </div>
+        <div class="fourinone-1 fade-left">
+            <h1 style="color: blueviolet">03</h1>
+            <h2 style="letter-spacing: -1px; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif">DEVELOPMENT<br><span class="fourinonecolor">Writing clean, maintainable frontend code with regular progress updates and feedback loops.</span></h2>
+        </div>
+        <div class="fourinone-1 fade-right">
+            <h1 style="color: blueviolet">04</h1>
+            <h2 style="letter-spacing: -1px; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif">LAUNCH & SUPPORT<br><span class="fourinonecolor">Deploying, testing, and fine-tuning to ensure your product is fast, stable, and ready to grow.</span></h2>
+        </div>
+    </div>
+    <div class="footer" id="contact">
+        <div class="startaproject">
+            <h1 style="color: white; font-size: 68px; font-family: sans-serif; line-height: 51px; letter-spacing: -6px;"><b>START A <br><span class="projectcolor">PROJECT</span></b></h1>
+        </div>
+        <a href="mailto:chigozieokeke896@gmail.com" class="email">
+              <h1>Email</h1>
+              <div class="emailcircle">
+                <h1>↗</h1>
+              </div>
+        </a>
+    </div>
+    <div class="socialmedia1">
+        <a href="https://wa.me/2348141891555"  class="insidesocialmedia fade-in">
+            <h3 style="font-size: 17px; color: gray;">CHAT</h3><br><br>
+            <div class="textinsocialmedia">
+                <img src="images/whatsapp7.png" alt="WhatsApp">
+                <h1>WhatsApp</h1>
+            </div>
+        </a>
+
+        <a href="https://www.instagram.com/gozie_3" target="_blank" class="insidesocialmedia fade-in">
+            <h3 style="font-size: 17px; color: gray;">FOLLOW</h3><br><br>
+            <div class="textinsocialmedia">
+                <img src="images/insta4.png" alt="Instagram">
+                <h1>Instagram</h1>
+            </div>
+        </a>
+        
+    </div>
+
+    <div class="socialmedia2">
+        <a href="tel:+2348141891555" class="insidesocialmedia fade-in">
+            <h3 style="font-size: 17px; color: gray;">CONTACT ME</h3><br><br>
+            <div class="textinsocialmedia">
+                <img src="images/phonefinal.png" alt="Contact" style="width: 60px; height: 50px;">
+                <h1>+ 234 814 1891 555</h1>
+            </div>
+        </a>
+
+        <a href="https://www.linkedin.com/public-profile/settings/?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_self_edit_contact_info%3BChnYlcqWTQOEcwhM92qRLA%3D%3D" target="_blank" class="insidesocialmedia fade-in">
+            <h3 style="font-size: 17px; color: gray;">PROFILE</h3><br><br>
+            <div class="textinsocialmedia">
+                <img src="images/linkeldlnfinal.png" alt="Instagram">
+                <h1>Linkedln</h1>
+            </div>
+        </a>
+        
+    </div>
+
+
+
+
+
+
+    <footer class="corporate-footer">
+
+    <div class="footer-top">
+
+        <a href="#home" class="footer-logo">
+            Tim's <span>Dev.</span>
+        </a>
+
+        <div class="footer-links">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#services">Services</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+        </div>
+
+        <div class="footer-socials">
+            <a href="https://www.instagram.com/gozie_3" target="_blank">Instagram</a>
+            <a href="https://wa.me/2348141891555" target="_blank">WhatsApp</a>
+            <a href="https://www.linkedin.com/public-profile/settings/?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_self_edit_contact_info%3BChnYlcqWTQOEcwhM92qRLA%3D%3D" target="_blank">LinkedIn</a>
+        </div>
+
+    </div>
+
+
+    <div class="footer-line"></div>
+
+
+    <div class="footer-bottom">
+
+        <p>© 2026 Tim's Dev. All rights reserved.</p>
+
+        <p>
+            Designed & Built by
+            <span>Tim's Dev</span>
+        </p>
+
+    </div>
+
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+    // Mobile Menu
+
+const menuToggle = document.getElementById("menuToggle");
+const navLinks = document.getElementById("navLinks");
+
+menuToggle.addEventListener("click", () => {
+    navLinks.classList.toggle("active");
+});
+
+// Glass Effect on Scroll
+
+window.addEventListener("scroll", () => {
+
+    const navbar = document.querySelector(".navbar");
+
+    if(window.scrollY > 40){
+
+        navbar.classList.add("scrolled");
+
+    }else{
+
+        navbar.classList.remove("scrolled");
+
+    }
+
+});
+
+
+
+
+
+
+
+
+
+const fadeElements = document.querySelectorAll(".fade-in, .fade-left, .fade-right, .zoom-in");
+
+const observer = new IntersectionObserver((entries) => {
+
+    entries.forEach(entry => {
+
+        if(entry.isIntersecting){
+
+            entry.target.classList.add("show");
+
+        }else{
+
+            entry.target.classList.remove("show");
+
+        }
+
+    });
+
+},{
+    threshold:0.2
+});
+
+fadeElements.forEach(element => observer.observe(element));
+</script>
+
+</body>
+</html>
